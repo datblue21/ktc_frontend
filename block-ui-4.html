@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .robert { background: linear-gradient(45deg, #3498db, #2ecc71); }
+        .james { background: linear-gradient(45deg, #e74c3c, #f39c12); }
+        .tom { background: linear-gradient(45deg, #34495e, #7f8c8d); }
+        .silvester { background: linear-gradient(45deg, #e74c3c, #c0392b); }
+
+        .card-content {
+            padding: 25px 20px;
+        }
+
+        .member-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            color: #bdc3c7;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .member-details {
+            text-align: left;
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .detail-icon {
+            width: 16px;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        .detail-label {
+            min-width: 40px;
+            font-weight: bold;
+        }
+
+        .detail-value {
+            margin-left: auto;
+            color: #bdc3c7;
+        }
+
+        .contact-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .contact-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .email-btn {
+            background: #e74c3c;
+        }
+
+        .phone-btn {
+            background: #2ecc71;
+        }
+
+        .robert .email-btn { background: #e74c3c; }
+        .robert .phone-btn { background: #2ecc71; }
+        
+        .james .email-btn { background: #3498db; }
+        .james .phone-btn { background: #5dade2; }
+        
+        .tom .email-btn { background: #e67e22; }
+        .tom .phone-btn { background: #f1c40f; }
+        
+        .silvester .email-btn { background: #9b59b6; }
+        .silvester .phone-btn { background: #e91e63; }
+    </style>
+</head>
+<body>
+    <div class="team-grid">
+        <div class="team-card robert">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <div class="member-name">ROBERT PATTISON</div>
+                <div class="member-role">Developing</div>
+                
+                <div class="member-details">
+                    <div class="detail-row">
+                        <span class="detail-icon">📅</span>
+                        <span class="detail-label">DOB</span>
+                        <span class="detail-value">23/05/2014</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">♥</span>
+                        <span class="detail-label">BG</span>
+                        <span class="detail-value">B+</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">🎓</span>
+                        <span class="detail-label">EDU</span>
+                        <span class="detail-value">MCA</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">📍</span>
+                        <span class="detail-label">RES</span>
+                        <span class="detail-value">Bangalore</span>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <button class="contact-btn email-btn">
+                        ✉ robert12@gmail.com
+                    </button>
+                </div>
+                <div class="contact-buttons">
+                    <button class="contact-btn phone-btn">
+                        📞 8665543219
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-card james">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <div class="member-name">JAMES SMITH</div>
+                <div class="member-role">Designer</div>
+                
+                <div class="member-details">
+                    <div class="detail-row">
+                        <span class="detail-icon">📅</span>
+                        <span class="detail-label">DOB</span>
+                        <span class="detail-value">23/05/2014</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">♥</span>
+                        <span class="detail-label">BG</span>
+                        <span class="detail-value">B+</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">🎓</span>
+                        <span class="detail-label">EDU</span>
+                        <span class="detail-value">MCA</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">📍</span>
+                        <span class="detail-label">RES</span>
+                        <span class="detail-value">Bangalore</span>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <button class="contact-btn email-btn">
+                        ✉ smith12@gmail.com
+                    </button>
+                </div>
+                <div class="contact-buttons">
+                    <button class="contact-btn phone-btn">
+                        📞 8225543219
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-card tom">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <div class="member-name">TOM HANKS</div>
+                <div class="member-role">UI Designer</div>
+                
+                <div class="member-details">
+                    <div class="detail-row">
+                        <span class="detail-icon">📅</span>
+                        <span class="detail-label">DOB</span>
+                        <span class="detail-value">23/05/2014</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">♥</span>
+                        <span class="detail-label">BG</span>
+                        <span class="detail-value">B+</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">🎓</span>
+                        <span class="detail-label">EDU</span>
+                        <span class="detail-value">MCA</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">📍</span>
+                        <span class="detail-label">RES</span>
+                        <span class="detail-value">Bangalore</span>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <button class="contact-btn email-btn">
+                        ✉ peter1@gmail.com
+                    </button>
+                </div>
+                <div class="contact-buttons">
+                    <button class="contact-btn phone-btn">
+                        📞 8225543929
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-card silvester">
+            <div class="card-image"></div>
+            <div class="card-content">
+                <div class="member-name">SILVESTER STALIN</div>
+                <div class="member-role">Testing</div>
+                
+                <div class="member-details">
+                    <div class="detail-row">
+                        <span class="detail-icon">📅</span>
+                        <span class="detail-label">DOB</span>
+                        <span class="detail-value">23/05/2014</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">♥</span>
+                        <span class="detail-label">BG</span>
+                        <span class="detail-value">B+</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">🎓</span>
+                        <span class="detail-label">EDU</span>
+                        <span class="detail-value">MCA</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">📍</span>
+                        <span class="detail-label">RES</span>
+                        <span class="detail-value">Bangalore</span>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <button class="contact-btn email-btn">
+                        ✉ point12@gmail.com
+                    </button>
+                </div>
+                <div class="contact-buttons">
+                    <button class="contact-btn phone-btn">
+                        📞 9937924265
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

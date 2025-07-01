@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 350px;
+        }
+
+        .profile-header {
+            background: linear-gradient(45deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2)), 
+                        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #e74c3c;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .profile-info h2 {
+            color: white;
+            margin: 0 0 5px 0;
+            font-size: 24px;
+        }
+
+        .profile-info p {
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .stats {
+            padding: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #ecf0f1;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 15px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .followers .stat-value { background: #e74c3c; }
+        .followings .stat-value { background: #3498db; }
+        .messages .stat-value { background: #2ecc71; }
+        .likes .stat-value { background: #f1c40f; }
+        .comments .stat-value { background: #9b59b6; }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="profile-image"></div>
+            <div class="profile-info">
+                <h2>Joseph Max</h2>
+                <p>Web Designer</p>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item followers">
+                <span>FOLLOWERS</span>
+                <span class="stat-value">1,200</span>
+            </div>
+            <div class="stat-item followings">
+                <span>FOLLOWINGS</span>
+                <span class="stat-value">1,200</span>
+            </div>
+            <div class="stat-item messages">
+                <span>MESSAGES</span>
+                <span class="stat-value">1,200</span>
+            </div>
+            <div class="stat-item likes">
+                <span>LIKES</span>
+                <span class="stat-value">1,200</span>
+            </div>
+            <div class="stat-item comments">
+                <span>COMMENTS</span>
+                <span class="stat-value">1,200</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

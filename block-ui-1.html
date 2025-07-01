@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 50px auto;
+        }
+
+        .progress-item {
+            position: relative;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 40px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 4px;
+            position: relative;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            z-index: 2;
+        }
+
+        .progress-percentage {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            z-index: 2;
+        }
+
+        .progress-bar.bandwidth {
+            background-color: #e74c3c;
+            width: 20%;
+        }
+
+        .progress-bar.storage {
+            background-color: #3498db;
+            width: 50%;
+        }
+
+        .progress-bar.users {
+            background-color: #2ecc71;
+            width: 70%;
+        }
+
+        .progress-bar.visitors {
+            background-color: #f1c40f;
+            width: 30%;
+        }
+
+        .progress-bar.emails {
+            background-color: #9b59b6;
+            width: 45%;
+        }
+
+        .progress-bar.basic {
+            background-color: #e91e63;
+            width: 80%;
+        }
+
+        .progress-bar.others {
+            background-color: #5dade2;
+            width: 37%;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-item">
+        <div class="progress-bar bandwidth"></div>
+        <div class="progress-text">
+            <span>BANDWIDTH</span>
+        </div>
+        <div class="progress-percentage">
+            <span>20%</span>
+        </div>
+    </div>
+
+    <div class="progress-item">
+        <div class="progress-bar storage"></div>
+        <div class="progress-text">
+            <span>STORAGE</span>
+        </div>
+        <div class="progress-percentage">
+            <span>50%</span>
+        </div>
+    </div>
+
+    <div class="progress-item">
+        <div class="progress-bar users"></div>
+        <div class="progress-text">
+            <span>USERS</span>
+        </div>
+        <div class="progress-percentage">
+            <span>70%</span>
+        </div>
+    </div>
+
+    <div class="progress-item">
+        <div class="progress-bar visitors"></div>
+        <div class="progress-text">
+            <span>VISITORS</span>
+        </div>
+        <div class="progress-percentage">
+            <span>30%</span>
+        </div>
+    </div>
+
+    <div class="progress-item">
+        <div class="progress-bar emails"></div>
+        <div class="progress-text">
+            <span>EMAILS</span>
+        </div>
+        <div class="progress-percentage">
+            <span>45%</span>
+        </div>
+    </div>
+
+    <div class="progress-item">
+        <div class="progress-bar basic"></div>
+        <div class="progress-text">
+            <span>BASIC</span>
+        </div>
+        <div class="progress-percentage">
+            <span>80%</span>
+        </div>
+    </div>
+
+    <div class="progress-item">
+        <div class="progress-bar others"></div>
+        <div class="progress-text">
+            <span>OTHERS</span>
+        </div>
+        <div class="progress-percentage">
+            <span>37%</span>
+        </div>
+    </div>
+</body>
+</html>

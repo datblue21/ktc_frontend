@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Flow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .process-flow {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 48px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+
+        .idea .step-circle {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+        }
+
+        .prototype .step-circle {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+        }
+
+        .coding .step-circle {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+        }
+
+        .testing .step-circle {
+            background: linear-gradient(45deg, #9b59b6, #8e44ad);
+        }
+
+        .arrow {
+            font-size: 36px;
+            color: #bdc3c7;
+            display: flex;
+            align-items: center;
+            height: 120px;
+        }
+
+        .step-circle::before {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .idea .step-circle::before {
+            content: "💡";
+        }
+
+        .prototype .step-circle::before {
+            content: "🖥️";
+        }
+
+        .coding .step-circle::before {
+            content: "</>";
+            font-family: monospace;
+            font-size: 36px;
+        }
+
+        .testing .step-circle::before {
+            content: "✓";
+            font-size: 56px;
+        }
+
+        @media (max-width: 768px) {
+            .process-flow {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="process-flow">
+        <div class="process-step idea">
+            <div class="step-circle"></div>
+            <div class="step-title">Idea</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="process-step prototype">
+            <div class="step-circle"></div>
+            <div class="step-title">Prototype</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="process-step coding">
+            <div class="step-circle"></div>
+            <div class="step-title">Coding</div>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="process-step testing">
+            <div class="step-circle"></div>
+            <div class="step-title">Testing</div>
+        </div>
+    </div>
+</body>
+</html>
