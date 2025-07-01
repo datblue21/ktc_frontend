@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Trần Chính Đạt - Data Engineer</title>
+    <link rel="stylesheet" href="resume-base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for Creative Design - Animated Resume */
+        :root {
+            --primary-color: #f59e0b;
+            --secondary-color: #64748b;
+            --accent-color: #f97316;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .resume {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .resume-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color), #ef4444);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resume-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 20px
+            );
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        .name {
+            animation: slideInLeft 1s ease-out 0.3s both;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .title {
+            animation: slideInRight 1s ease-out 0.5s both;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info {
+            animation: fadeInUp 1s ease-out 0.7s both;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .sidebar {
+            animation: slideInLeft 1s ease-out 0.9s both;
+            background: linear-gradient(180deg, #fef3c7, #fed7aa);
+        }
+        
+        .main-content {
+            animation: slideInRight 1s ease-out 1.1s both;
+        }
+        
+        .section {
+            animation: fadeInUp 0.6s ease-out both;
+        }
+        
+        .section:nth-child(1) { animation-delay: 1.3s; }
+        .section:nth-child(2) { animation-delay: 1.5s; }
+        .section:nth-child(3) { animation-delay: 1.7s; }
+        .section:nth-child(4) { animation-delay: 1.9s; }
+        
+        .skill-progress {
+            animation: fillProgress 2s ease-out 2s both;
+        }
+        
+        @keyframes fillProgress {
+            from { width: 0%; }
+        }
+        
+        .creative-element {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        .portfolio-item {
+            background: #fff7ed;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 2px solid #fed7aa;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .portfolio-item:hover::before {
+            left: 100%;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.2);
+        }
+        
+        .creative-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: #fff7ed;
+            border-radius: 0.5rem;
+            border: 2px solid #fed7aa;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            animation: fadeInUp 1s ease-out 2s both;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <!-- Header -->
+        <header class="resume-header">
+            <div class="creative-element"></div>
+            <h1 class="name">Trần Chính Đạt</h1>
+            <p class="title">Data Engineer</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>🎨</span>
+                    <span>chinhdat@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+84 789 123 456</span>
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span>
+                    <span>chinh-dat-portfolio.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>TP. Đà Nẵng, Việt Nam</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="resume-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Creative Skills -->
+                <section class="section">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item-alt">
+                            <span class="skill-name-alt">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-alt">
+                            <span class="skill-name-alt">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-alt">
+                            <span class="skill-name-alt">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-alt">
+                            <span class="skill-name-alt">Apache Spark</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item-alt">
+                            <span class="skill-name-alt">Kubernetes</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Software -->
+                <section class="section">
+                    <h2 class="section-title">Tools</h2>
+                    <div class="interests-list">
+                        <span class="interest-tag">Numpy</span>
+                        <span class="interest-tag">Pandas</span>
+                        <span class="interest-tag">Seaborn</span>
+                        <span class="interest-tag">Fast API</span>
+                        <span class="interest-tag">RESTFul API</span>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-item">
+                        <h3 class="degree">Bachelor of Computer Science</h3>
+                        <p class="school">Data Science</p>
+                        <p class="graduation-year">Viet Nam - Korean University</p>
+                        <p class="graduation-year">2021 - 2026</p>
+                    </div>
+                    <div class="education-item">
+                        <h3 class="degree">Master of Data Science</h3>
+                        <p class="school">University of Science and Technology</p>
+                        <p class="graduation-year">Expected 2026</p>
+                    </div>
+                        
+                </section>
+
+                <!-- Awards -->
+                <section class="section">
+                    <h2 class="section-title">Awards</h2>
+                    <div class="education-item">
+                        <h3 class="degree">4th Award</h3>
+                        <p class="school">Vietnam Advertising Festival</p>
+                        <p class="graduation-year">2023</p>
+                    </div>
+                    <div class="education-item">
+                        <h3 class="degree">AI Excellence</h3>
+                        <p class="school">Third Prize</p>
+                        <p class="graduation-year">2022</p>
+                    </div>
+                    <div class="education-item">
+                        <h3 class="degree">Best Web Design</h3>
+                        <p class="school">5th Prize</p>
+                        <p class="graduation-year">2021</p>
+                </section>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Creative Stats -->
+                <section class="section">
+                    <div class="creative-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Scholar</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Awards Won</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Creative Philosophy -->
+                <!-- <section class="section">
+                    <h2 class="section-title">Creative Philosophy</h2>
+                    <p class="description">
+                        "Design is not just what it looks like and feels like. Design is how it works." - Steve Jobs. 
+                        I believe in creating meaningful visual experiences that connect brands with their audiences on an emotional level. 
+                        My approach combines strategic thinking with artistic execution, resulting in designs that are both beautiful and functional. 
+                        Every project is an opportunity to tell a unique story through visual language.
+                    </p>
+                </section> -->
+
+                <!-- Experience -->
+                <section class="section">
+                    <h2 class="section-title">Professional Experience</h2>
+                    
+                    <div class="experience-item">
+                        <h3 class="job-title">Data Engineer</h3>
+                        <p class="company">FPT Software</p>
+                        <p class="duration">June 2022 - Present</p>
+                        <div class="description">
+                            <ul>
+                                <li>Developed and maintained ETL pipelines for processing large datasets</li>
+                                <li>Optimized SQL queries for data retrieval and reporting</li>
+                                <li>Implemented data quality checks and monitoring systems</li>
+                                <li>Collaborated with data scientists to integrate machine learning models</li>
+                                <li>Designed and deployed data processing applications using Docker</li>
+                                <li>Contributed to open-source data engineering projects on GitHub</li>
+                            </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="job-title">Data Operater</h3>
+                        <p class="company">FPT University</p>
+                        <p class="duration">March 2020 - May 2022</p>
+                        <div class="description">
+                            <ul>
+                                <li>Assisted in data collection and preprocessing for academic research</li>
+                                <li>Developed scripts for automating data cleaning and transformation tasks</li>
+                                <li>Collaborated with professors on data analysis projects</li>
+                                <li>Maintained and updated the university's data management system</li>
+                                <li>Conducted workshops on data visualization tools for students</li>
+                                <li>Participated in hackathons and coding competitions, winning 2nd place in a national data science challenge</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="job-title">Intern Developer</h3>
+                        <p class="company">Viettel Group</p>
+                        <p class="duration">June 2019 - August 2019</p>
+                        <div class="description">
+                            <ul>
+                                <li>Assisted in developing a data analytics platform for telecom data</li>
+                                <li>Learned about big data technologies like Hadoop and Spark</li>
+                                <li>Participated in team meetings and contributed to project planning</li>
+                                <li>Gained hands-on experience with data visualization tools</li>
+                                <li>Shadowed senior developers to learn best practices in software development</li>
+                                <li>Presented findings from a data analysis project to the team</li>
+                            </ul>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>
